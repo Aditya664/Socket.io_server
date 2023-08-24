@@ -1,3 +1,0 @@
-[build]
-  command = "npm run build" # Adjust the build command as needed
-  publish = "path/to/build/directory" # Specify the directory where your build files will be generated
