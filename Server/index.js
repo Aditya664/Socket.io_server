@@ -6,8 +6,14 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: cors()
+  cors: {
+    origin: 'http://localhost:4200', // Allow requests from localhost
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+    credentials: true,
+  },
 });
+
 
 const PORT = process.env.PORT || 3000;
 
