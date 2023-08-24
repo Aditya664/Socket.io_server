@@ -28,4 +28,5 @@ jobs:
           npm install
           npm install -g grunt-cli
           cd Server # Change this to your actual server folder path
-          grunt
+          npm install # Install Server dependencies
+          npx grunt
