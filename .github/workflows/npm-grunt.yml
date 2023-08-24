@@ -25,8 +25,8 @@ jobs:
 
       - name: Install Dependencies and Build
         run: |
+          cd Server # Change this to your actual server folder path
           npm install
           npm install -g grunt-cli
-          cd Server # Change this to your actual server folder path
           npm install # Install Server dependencies
           npx grunt
