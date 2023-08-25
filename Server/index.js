@@ -1,19 +1,17 @@
 const express = require('express');
 const http = require('http');
-const { Server } = require('socket.io'); // Use the Server class
-const cors = require('cors');
+const { Server } = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:4200', // Allow requests from localhost
+    origin: ['http://localhost:4200', 'https://darling-douhua-369796.netlify.app'],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
   },
 });
-
 
 const PORT = process.env.PORT || 3000;
 
