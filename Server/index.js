@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:4200', 'https://darling-douhua-369796.netlify.app'],
+    origin: ['http://localhost:4200'],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true,
